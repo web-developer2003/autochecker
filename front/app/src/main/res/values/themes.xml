@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.AutoChecker" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:statusBarColor">#FF0C0C0C</item>
+        <item name="android:navigationBarColor">#FF141414</item>
+        <item name="android:windowBackground">#FF0C0C0C</item>
+    </style>
+</resources>

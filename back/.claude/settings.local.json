@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker compose:*)",
+      "Bash(python3:*)",
+      "Bash(mkdir:*)",
+      "Bash(do:*)",
+      "Bash(done)",
+      "Bash(python:*)",
+      "Bash(do mkdir:*)",
+      "Bash(nslookup:*)",
+      "Bash(ping:*)"
+    ]
+  }
+}

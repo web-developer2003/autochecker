@@ -1,0 +1,10 @@
+# PRECAUTION: avoid production dependencies that aren't in development
+
+-r base.txt
+
+psycopg[c]==3.2.1
+sentry-sdk==2.7.1
+
+# Django
+# ------------------------------------------------------------------------------
+django-anymail==11.0

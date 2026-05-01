@@ -1,0 +1,172 @@
+<resources>
+    <!-- App -->
+    <string name="app_name">AutoChecker</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Проверка</string>
+    <string name="nav_history">История</string>
+    <string name="nav_profile">Профиль</string>
+
+    <!-- Login -->
+    <string name="login_title">Вход</string>
+    <string name="login_subtitle">Сервис проверки истории автомобиля</string>
+    <string name="login_button">Войти</string>
+    <string name="email">Email</string>
+    <string name="email_placeholder">email@example.com</string>
+    <string name="password">Пароль</string>
+    <string name="password_placeholder">Введите пароль</string>
+    <string name="no_account">Нет аккаунта?</string>
+    <string name="sign_up_link">Зарегистрироваться</string>
+
+    <!-- Sign Up -->
+    <string name="signup_title">Регистрация</string>
+    <string name="signup_subtitle">Создайте новый аккаунт</string>
+    <string name="signup_button">Зарегистрироваться</string>
+    <string name="full_name">Полное имя</string>
+    <string name="full_name_placeholder">Имя Фамилия</string>
+    <string name="phone">Телефон</string>
+    <string name="phone_placeholder">+998 90 123 45 67</string>
+    <string name="confirm_password">Подтвердите пароль</string>
+    <string name="confirm_password_placeholder">Повторите пароль</string>
+    <string name="have_account">Уже есть аккаунт?</string>
+    <string name="login_link">Войти</string>
+
+    <!-- Home -->
+    <string name="home_greeting">Проверка автомобиля</string>
+    <string name="home_subtitle">Узнайте историю автомобиля по гос. номеру</string>
+    <string name="vin_placeholder">Введите VIN номер</string>
+    <string name="plate_search_placeholder">Введите гос. номер (напр., 01 A 123 AA)</string>
+    <string name="search_button">Проверить</string>
+    <string name="what_we_check">Что мы проверяем</string>
+    <string name="feature_accidents">Аварии</string>
+    <string name="feature_accidents_desc">Полная история аварий и повреждений</string>
+    <string name="feature_legal">Юридический статус</string>
+    <string name="feature_legal_desc">Проверка угона, залога, ограничений</string>
+    <string name="feature_mileage">Пробег</string>
+    <string name="feature_mileage_desc">История изменений пробега</string>
+    <string name="feature_service">Обслуживание</string>
+    <string name="feature_service_desc">Все сервисные записи</string>
+    <string name="feature_insurance">Страховка</string>
+    <string name="feature_insurance_desc">Информация и статус страховки</string>
+
+    <!-- Search Type -->
+    <string name="search_type_label">Тип поиска</string>
+    <string name="search_type_plate">Гос. номер</string>
+    <string name="search_type_vin">VIN код</string>
+
+    <!-- Search Source -->
+    <string name="search_source">Источник поиска</string>
+    <string name="source_local">Наша база</string>
+    <string name="source_government">Гос. база</string>
+    <string name="source_internet">Интернет</string>
+
+    <!-- Report Accident -->
+    <string name="report_accident">Сообщить об аварии</string>
+    <string name="report_accident_desc">Сфотографируйте и введите гос. номер</string>
+    <string name="accident_photo">Фото аварии</string>
+    <string name="take_photo">Сфотографировать</string>
+    <string name="choose_gallery">Из галереи</string>
+    <string name="severity_label">Степень тяжести</string>
+    <string name="severity_minor">Лёгкая</string>
+    <string name="severity_moderate">Средняя</string>
+    <string name="severity_major">Тяжёлая</string>
+    <string name="location_label">Местоположение</string>
+    <string name="location_placeholder">Ташкент, Чиланзарский район</string>
+    <string name="accident_description_placeholder">Краткое описание аварии</string>
+    <string name="submit_report">Отправить</string>
+
+    <!-- Vehicle Summary -->
+    <string name="vehicle_summary_title">Данные автомобиля</string>
+    <string name="quick_stats">Краткая информация</string>
+    <string name="vin_label">VIN</string>
+    <string name="plate_label">Гос. номер</string>
+    <string name="plate_placeholder">01 A 123 AA</string>
+    <string name="engine_label">Двигатель</string>
+    <string name="transmission_label">Коробка передач</string>
+    <string name="owners_label">Количество владельцев</string>
+    <string name="accidents_label">Количество аварий</string>
+    <string name="legal_status">Юридический статус</string>
+    <string name="check_stolen">В базе угонов</string>
+    <string name="check_pledge">В залоге</string>
+    <string name="check_restrictions">Ограничения</string>
+    <string name="check_arrest">Арест</string>
+    <string name="view_full_report">Полный отчёт</string>
+
+    <!-- Full Report -->
+    <string name="full_report_title">Полный отчёт</string>
+    <string name="mileage_history">История пробега</string>
+    <string name="accidents_section">Аварии</string>
+    <string name="accidents_found">Обнаружено аварий: %d</string>
+    <string name="view_accidents">Просмотреть аварии</string>
+    <string name="service_history">История обслуживания</string>
+    <string name="inspections">Технические осмотры</string>
+    <string name="insurance_info">Данные страховки</string>
+    <string name="insurance_provider">Страховая компания</string>
+    <string name="insurance_policy">Номер полиса</string>
+    <string name="insurance_type">Тип</string>
+    <string name="insurance_valid">Срок действия</string>
+    <string name="registration_history">История регистрации</string>
+
+    <!-- Accidents -->
+    <string name="accidents_list_title">Список аварий</string>
+    <string name="accidents_count">Всего обнаружено аварий: %d</string>
+    <string name="accident_detail_title">Детали аварии</string>
+    <string name="description">Описание</string>
+    <string name="damaged_areas">Повреждённые области</string>
+    <string name="repair_info">Информация о ремонте</string>
+    <string name="repair_cost">Стоимость ремонта</string>
+    <string name="repair_status">Статус ремонта</string>
+    <string name="police_report">Протокол полиции</string>
+
+    <!-- History -->
+    <string name="history_title">История поиска</string>
+    <string name="history_subtitle">Ранее проверенные автомобили</string>
+    <string name="history_empty">Ещё ничего не проверено</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Профиль</string>
+    <string name="edit_profile_title">Редактировать профиль</string>
+    <string name="save_button">Сохранить</string>
+    <string name="logout">Выйти</string>
+
+    <!-- Saved Vehicles -->
+    <string name="saved_vehicles">Сохранённые авто</string>
+    <string name="no_saved_vehicles">Нет сохранённых автомобилей</string>
+    <string name="add_vehicle_title">Добавить автомобиль</string>
+    <string name="add_vehicle_subtitle">Введите данные автомобиля</string>
+    <string name="vehicle_name">Название</string>
+    <string name="vehicle_name_placeholder">Chevrolet Malibu</string>
+    <string name="save_vehicle_button">Сохранить</string>
+
+    <!-- Settings -->
+    <string name="notifications_title">Уведомления</string>
+    <string name="notifications_enable">Уведомления</string>
+    <string name="notifications_enable_desc">Включить/выключить все уведомления</string>
+    <string name="push_notifications">Push-уведомления</string>
+    <string name="push_report_ready">Отчёт готов</string>
+    <string name="push_report_ready_desc">Уведомлять о готовности отчёта</string>
+    <string name="push_promotions">Акции</string>
+    <string name="push_promotions_desc">Специальные предложения и скидки</string>
+    <string name="push_updates">Обновления</string>
+    <string name="push_updates_desc">Уведомлять об обновлениях приложения</string>
+
+    <!-- Appearance -->
+    <string name="appearance_title">Внешний вид</string>
+    <string name="appearance_subtitle">Настройте внешний вид приложения</string>
+    <string name="theme_dark">Тёмная</string>
+    <string name="theme_light">Светлая</string>
+    <string name="coming_soon">Скоро</string>
+
+    <!-- Language -->
+    <string name="language_title">Язык</string>
+    <string name="language_subtitle">Выберите язык приложения</string>
+
+    <!-- Privacy & Terms -->
+    <string name="privacy_policy_title">Политика конфиденциальности</string>
+    <string name="privacy_policy_updated">Последнее обновление: 01.01.2024</string>
+    <string name="privacy_policy_content">Приложение AutoChecker обязуется защищать персональные данные пользователей.\n\n1. Сбор данных\nМы собираем данные, предоставленные пользователем (имя, email, телефон) и запросы проверки автомобилей.\n\n2. Использование данных\nСобранные данные используются исключительно для оказания услуг. Мы не продаём ваши данные третьим лицам.\n\n3. Безопасность данных\nМы используем современные технологии шифрования для защиты ваших данных.\n\n4. Файлы cookie\nИспользуются файлы cookie, необходимые для работы приложения.\n\n5. Контакты\nПо вопросам обращайтесь: info@autochecker.uz</string>
+
+    <string name="terms_title">Условия использования</string>
+    <string name="terms_updated">Последнее обновление: 01.01.2024</string>
+    <string name="terms_content">Использование приложения AutoChecker регулируется следующими условиями.\n\n1. Описание услуги\nAutoChecker предоставляет услугу проверки истории автомобиля. Результаты основаны на данных из официальных источников.\n\n2. Обязанности пользователя\nПользователь обязан предоставлять достоверные данные и использовать сервис в законных целях.\n\n3. Ограничение ответственности\nAutoChecker не гарантирует полноту и точность предоставленных данных. Результаты предоставляются исключительно в информационных целях.\n\n4. Условия оплаты\nНекоторые услуги могут быть платными. Цены указаны в приложении.\n\n5. Изменение условий\nМы оставляем за собой право изменять данные условия в любое время.</string>
+</resources>

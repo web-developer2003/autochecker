@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -o errexit
+set -o nounset
+
+rm -f './celerybeat.pid'
+python manage.py migrate --check > /dev/null 2>&1
+until [ $? -eq 0 ]; do
+  echo "Waiting for migrations to complete..."
+  sleep 3
+  python manage.py migrate --check > /dev/null 2>&1
+done
+exec watchfiles --filter python celery.__main__.main --args '-A config.celery_app beat -l INFO'

@@ -1,0 +1,172 @@
+<resources>
+    <!-- App -->
+    <string name="app_name">AutoChecker</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Tekshirish</string>
+    <string name="nav_history">Tarix</string>
+    <string name="nav_profile">Profil</string>
+
+    <!-- Login -->
+    <string name="login_title">Kirish</string>
+    <string name="login_subtitle">Avtomobil tarixini tekshirish xizmati</string>
+    <string name="login_button">Kirish</string>
+    <string name="email">Email</string>
+    <string name="email_placeholder">email@example.com</string>
+    <string name="password">Parol</string>
+    <string name="password_placeholder">Parolni kiriting</string>
+    <string name="no_account">Hisobingiz yo\'qmi?</string>
+    <string name="sign_up_link">Ro\'yxatdan o\'ting</string>
+
+    <!-- Sign Up -->
+    <string name="signup_title">Ro\'yxatdan o\'tish</string>
+    <string name="signup_subtitle">Yangi hisob yaratish</string>
+    <string name="signup_button">Ro\'yxatdan o\'tish</string>
+    <string name="full_name">To\'liq ism</string>
+    <string name="full_name_placeholder">Ism Familiya</string>
+    <string name="phone">Telefon raqam</string>
+    <string name="phone_placeholder">+998 90 123 45 67</string>
+    <string name="confirm_password">Parolni tasdiqlash</string>
+    <string name="confirm_password_placeholder">Parolni qayta kiriting</string>
+    <string name="have_account">Hisobingiz bormi?</string>
+    <string name="login_link">Kirish</string>
+
+    <!-- Home -->
+    <string name="home_greeting">Avtomobil tekshirish</string>
+    <string name="home_subtitle">Davlat raqami orqali avtomobil tarixini bilib oling</string>
+    <string name="vin_placeholder">VIN raqamni kiriting</string>
+    <string name="plate_search_placeholder">Davlat raqamini kiriting (masalan, 01 A 123 AA)</string>
+    <string name="search_button">Tekshirish</string>
+    <string name="what_we_check">Nimalarni tekshiramiz</string>
+    <string name="feature_accidents">Avariyalar</string>
+    <string name="feature_accidents_desc">Barcha avariya va shikastlanishlar tarixi</string>
+    <string name="feature_legal">Huquqiy holat</string>
+    <string name="feature_legal_desc">O\'g\'irlik, garov, cheklovlar tekshiruvi</string>
+    <string name="feature_mileage">Yurish masofasi</string>
+    <string name="feature_mileage_desc">Probeg o\'zgarishlari tarixi</string>
+    <string name="feature_service">Texnik xizmat</string>
+    <string name="feature_service_desc">Barcha servis yozuvlari</string>
+    <string name="feature_insurance">Sug\'urta</string>
+    <string name="feature_insurance_desc">Sug\'urta ma\'lumotlari va holati</string>
+
+    <!-- Search Type -->
+    <string name="search_type_label">Qidiruv turi</string>
+    <string name="search_type_plate">Davlat raqami</string>
+    <string name="search_type_vin">VIN kod</string>
+
+    <!-- Search Source -->
+    <string name="search_source">Qidiruv manbasi</string>
+    <string name="source_local">Bizning baza</string>
+    <string name="source_government">Davlat bazasi</string>
+    <string name="source_internet">Internet</string>
+
+    <!-- Report Accident -->
+    <string name="report_accident">Avariyani xabar qilish</string>
+    <string name="report_accident_desc">Suratga oling va davlat raqamini kiriting</string>
+    <string name="accident_photo">Avariya surati</string>
+    <string name="take_photo">Suratga olish</string>
+    <string name="choose_gallery">Galereyadan</string>
+    <string name="severity_label">Jiddiylik darajasi</string>
+    <string name="severity_minor">Yengil</string>
+    <string name="severity_moderate">O\'rtacha</string>
+    <string name="severity_major">Og\'ir</string>
+    <string name="location_label">Joylashuv</string>
+    <string name="location_placeholder">Toshkent, Chilonzor tumani</string>
+    <string name="accident_description_placeholder">Avariya haqida qisqacha ma\'lumot</string>
+    <string name="submit_report">Yuborish</string>
+
+    <!-- Vehicle Summary -->
+    <string name="vehicle_summary_title">Avtomobil ma\'lumotlari</string>
+    <string name="quick_stats">Qisqacha ma\'lumotlar</string>
+    <string name="vin_label">VIN</string>
+    <string name="plate_label">Davlat raqami</string>
+    <string name="plate_placeholder">01 A 123 AA</string>
+    <string name="engine_label">Dvigatel</string>
+    <string name="transmission_label">Uzatmalar qutisi</string>
+    <string name="owners_label">Egalari soni</string>
+    <string name="accidents_label">Avariyalar soni</string>
+    <string name="legal_status">Huquqiy holat</string>
+    <string name="check_stolen">O\'g\'irlik bazasida</string>
+    <string name="check_pledge">Garovda</string>
+    <string name="check_restrictions">Cheklovlar</string>
+    <string name="check_arrest">Hibsda</string>
+    <string name="view_full_report">To\'liq hisobotni ko\'rish</string>
+
+    <!-- Full Report -->
+    <string name="full_report_title">To\'liq hisobot</string>
+    <string name="mileage_history">Probeg tarixi</string>
+    <string name="accidents_section">Avariyalar</string>
+    <string name="accidents_found">%d ta avariya aniqlandi</string>
+    <string name="view_accidents">Avariyalarni ko\'rish</string>
+    <string name="service_history">Servis tarixi</string>
+    <string name="inspections">Texnik ko\'riklar</string>
+    <string name="insurance_info">Sug\'urta ma\'lumotlari</string>
+    <string name="insurance_provider">Sug\'urta kompaniyasi</string>
+    <string name="insurance_policy">Polisa raqami</string>
+    <string name="insurance_type">Turi</string>
+    <string name="insurance_valid">Amal qilish muddati</string>
+    <string name="registration_history">Ro\'yxatdan o\'tish tarixi</string>
+
+    <!-- Accidents -->
+    <string name="accidents_list_title">Avariyalar ro\'yxati</string>
+    <string name="accidents_count">Jami %d ta avariya aniqlandi</string>
+    <string name="accident_detail_title">Avariya tafsilotlari</string>
+    <string name="description">Tavsif</string>
+    <string name="damaged_areas">Shikastlangan joylar</string>
+    <string name="repair_info">Ta\'mirlash ma\'lumotlari</string>
+    <string name="repair_cost">Ta\'mirlash narxi</string>
+    <string name="repair_status">Ta\'mirlash holati</string>
+    <string name="police_report">Politsiya bayonnomasi</string>
+
+    <!-- History -->
+    <string name="history_title">Qidiruv tarixi</string>
+    <string name="history_subtitle">Avval tekshirilgan avtomobillar</string>
+    <string name="history_empty">Hali hech narsa tekshirilmagan</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Profil</string>
+    <string name="edit_profile_title">Profilni tahrirlash</string>
+    <string name="save_button">Saqlash</string>
+    <string name="logout">Chiqish</string>
+
+    <!-- Saved Vehicles -->
+    <string name="saved_vehicles">Saqlangan avtomobillar</string>
+    <string name="no_saved_vehicles">Saqlangan avtomobil yo\'q</string>
+    <string name="add_vehicle_title">Avtomobil qo\'shish</string>
+    <string name="add_vehicle_subtitle">Avtomobil ma\'lumotlarini kiriting</string>
+    <string name="vehicle_name">Nomi</string>
+    <string name="vehicle_name_placeholder">Chevrolet Malibu</string>
+    <string name="save_vehicle_button">Saqlash</string>
+
+    <!-- Settings -->
+    <string name="notifications_title">Bildirishnomalar</string>
+    <string name="notifications_enable">Bildirishnomalar</string>
+    <string name="notifications_enable_desc">Barcha bildirishnomalarni yoqish/o\'chirish</string>
+    <string name="push_notifications">Push bildirishnomalar</string>
+    <string name="push_report_ready">Hisobot tayyor</string>
+    <string name="push_report_ready_desc">Hisobot tayyor bo\'lganda xabar berish</string>
+    <string name="push_promotions">Aksiyalar</string>
+    <string name="push_promotions_desc">Maxsus takliflar va chegirmalar</string>
+    <string name="push_updates">Yangilanishlar</string>
+    <string name="push_updates_desc">Ilova yangilanishlari haqida xabar berish</string>
+
+    <!-- Appearance -->
+    <string name="appearance_title">Tashqi ko\'rinish</string>
+    <string name="appearance_subtitle">Ilovaning tashqi ko\'rinishini sozlang</string>
+    <string name="theme_dark">Qorong\'u</string>
+    <string name="theme_light">Yorug\'</string>
+    <string name="coming_soon">Tez kunda</string>
+
+    <!-- Language -->
+    <string name="language_title">Til</string>
+    <string name="language_subtitle">Ilova tilini tanlang</string>
+
+    <!-- Privacy & Terms -->
+    <string name="privacy_policy_title">Maxfiylik siyosati</string>
+    <string name="privacy_policy_updated">Oxirgi yangilangan: 2024-01-01</string>
+    <string name="privacy_policy_content">AutoChecker ilovasi foydalanuvchilarning shaxsiy ma\'lumotlarini himoya qilishga sodiqdir.\n\n1. Ma\'lumotlarni yig\'ish\nBiz foydalanuvchi tomonidan taqdim etilgan ma\'lumotlarni (ism, email, telefon raqam) va avtomobil tekshiruv so\'rovlarini yig\'amiz.\n\n2. Ma\'lumotlardan foydalanish\nYig\'ilgan ma\'lumotlar faqat xizmat ko\'rsatish maqsadida ishlatiladi. Biz sizning ma\'lumotlaringizni uchinchi tomonlarga sotmaymiz.\n\n3. Ma\'lumotlar xavfsizligi\nBiz ma\'lumotlaringizni himoya qilish uchun zamonaviy shifrlash texnologiyalaridan foydalanamiz.\n\n4. Cookie fayllar\nIlova ishlashi uchun zarur bo\'lgan cookie fayllardan foydalaniladi.\n\n5. Bog\'lanish\nSavollar bo\'lsa, info@autochecker.uz manziliga murojaat qiling.</string>
+
+    <string name="terms_title">Foydalanish shartlari</string>
+    <string name="terms_updated">Oxirgi yangilangan: 2024-01-01</string>
+    <string name="terms_content">AutoChecker ilovasidan foydalanish quyidagi shartlarga bo\'ysunadi.\n\n1. Xizmat tavsifi\nAutoChecker avtomobil tarixini tekshirish xizmatini taqdim etadi. Natijalar rasmiy manbalardan olingan ma\'lumotlarga asoslanadi.\n\n2. Foydalanuvchi majburiyatlari\nFoydalanuvchi haqiqiy ma\'lumotlarni taqdim etishi va xizmatdan qonuniy maqsadlarda foydalanishi shart.\n\n3. Javobgarlik cheklovi\nAutoChecker taqdim etilgan ma\'lumotlarning to\'liqligi va aniqligi uchun to\'liq kafolat bermaydi. Natijalar faqat ma\'lumot maqsadida taqdim etiladi.\n\n4. To\'lov shartlari\nBa\'zi xizmatlar pullik bo\'lishi mumkin. Narxlar ilovada ko\'rsatiladi.\n\n5. Shartlarni o\'zgartirish\nBiz ushbu shartlarni istalgan vaqtda o\'zgartirish huquqini saqlab qolamiz.</string>
+</resources>

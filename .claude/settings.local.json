@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(.venv/Scripts/python.exe:*)",
+      "Bash(DATABASE_URL=sqlite:///db.sqlite3 .venv/Scripts/python.exe:*)",
+      "Bash(rm:*)",
+      "Bash(pip:*)",
+      "Bash(docker compose:*)",
+      "Bash(curl:*)",
+      "Bash(./gradlew assembleDebug:*)",
+      "Bash(JAVA_HOME=\"C:/Program Files/Android/Android Studio/jbr\" ./gradlew assembleDebug:*)",
+      "Bash(xargs grep:*)",
+      "Bash(xargs:*)",
+      "Bash(docker exec autochecker_local_django:*)",
+      "Bash(docker exec:*)",
+      "Bash(docker restart autochecker_local_django:*)"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+-keep,allowobfuscation,allowshrinking class com.autochecker.ui.accident.ReportAccidentViewModel
+-keep,allowobfuscation,allowshrinking class com.autochecker.ui.accident.ReportAccidentViewModel
+-keep,allowobfuscation,allowshrinking class com.autochecker.ui.auth.AuthViewModel
+-keep,allowobfuscation,allowshrinking class com.autochecker.ui.auth.AuthViewModel
+-keep,allowobfuscation,allowshrinking class com.autochecker.ui.history.HistoryViewModel
+-keep,allowobfuscation,allowshrinking class com.autochecker.ui.history.HistoryViewModel

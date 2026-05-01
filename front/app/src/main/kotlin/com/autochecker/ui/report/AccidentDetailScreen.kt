@@ -50,13 +50,13 @@ fun AccidentDetailScreen(
                         Row {
                             Column(modifier = Modifier.weight(1f)) {
                                 Text(
-                                    text = accident.date,
+                                    text = accident.date ?: "",
                                     style = MaterialTheme.typography.headlineSmall,
                                     color = AutoCheckerTheme.colors.textPrimary,
                                 )
                                 Spacer(modifier = Modifier.height(4.dp))
                                 Text(
-                                    text = accident.location,
+                                    text = accident.location ?: "",
                                     style = MaterialTheme.typography.bodyMedium,
                                     color = AutoCheckerTheme.colors.textSecondary,
                                 )
@@ -115,9 +115,9 @@ fun AccidentDetailScreen(
                     AutoCheckerCard {
                         SectionHeader(title = stringResource(R.string.repair_info))
                         Spacer(modifier = Modifier.height(8.dp))
-                        DetailRow(stringResource(R.string.repair_cost), accident.repairCost)
-                        DetailRow(stringResource(R.string.repair_status), accident.repairStatus)
-                        DetailRow(stringResource(R.string.police_report), accident.policeReportNumber)
+                        DetailRow(stringResource(R.string.repair_cost), accident.repairCost ?: "")
+                        DetailRow(stringResource(R.string.repair_status), accident.repairStatus ?: "")
+                        DetailRow(stringResource(R.string.police_report), accident.policeReportNumber ?: "")
                     }
 
                     Spacer(modifier = Modifier.height(24.dp))

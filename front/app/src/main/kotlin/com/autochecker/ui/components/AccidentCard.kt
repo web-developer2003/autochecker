@@ -50,7 +50,7 @@ fun AccidentCard(
         Column(modifier = Modifier.weight(1f)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
-                    text = accident.date,
+                    text = accident.date ?: "",
                     style = MaterialTheme.typography.titleSmall,
                     color = AutoCheckerTheme.colors.textPrimary,
                 )
@@ -59,7 +59,7 @@ fun AccidentCard(
             }
             Spacer(modifier = Modifier.height(4.dp))
             Text(
-                text = accident.location,
+                text = accident.location ?: "",
                 style = MaterialTheme.typography.bodySmall,
                 color = AutoCheckerTheme.colors.textSecondary,
             )

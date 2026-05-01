@@ -440,6 +440,7 @@ public final class DaggerAutoCheckerApp_HiltComponents_SingletonC {
 
     private MainActivity injectMainActivity2(MainActivity instance) {
       MainActivity_MembersInjector.injectDataStoreManager(instance, singletonCImpl.provideDataStoreManagerProvider.get());
+      MainActivity_MembersInjector.injectTokenManager(instance, singletonCImpl.provideTokenManagerProvider.get());
       return instance;
     }
   }
@@ -668,12 +669,12 @@ public final class DaggerAutoCheckerApp_HiltComponents_SingletonC {
     @SuppressWarnings("unchecked")
     private void initialize(final ApplicationContextModule applicationContextModuleParam) {
       this.provideDataStoreManagerProvider = DoubleCheck.provider(new SwitchingProvider<DataStoreManager>(singletonCImpl, 0));
-      this.provideTokenManagerProvider = DoubleCheck.provider(new SwitchingProvider<TokenManager>(singletonCImpl, 5));
-      this.provideOkHttpClientProvider = DoubleCheck.provider(new SwitchingProvider<OkHttpClient>(singletonCImpl, 4));
+      this.provideTokenManagerProvider = DoubleCheck.provider(new SwitchingProvider<TokenManager>(singletonCImpl, 1));
+      this.provideOkHttpClientProvider = DoubleCheck.provider(new SwitchingProvider<OkHttpClient>(singletonCImpl, 5));
       this.provideGsonProvider = DoubleCheck.provider(new SwitchingProvider<Gson>(singletonCImpl, 6));
-      this.provideRetrofitProvider = DoubleCheck.provider(new SwitchingProvider<Retrofit>(singletonCImpl, 3));
-      this.provideApiServiceProvider = DoubleCheck.provider(new SwitchingProvider<ApiService>(singletonCImpl, 2));
-      this.realAuthRepositoryProvider = new SwitchingProvider<>(singletonCImpl, 1);
+      this.provideRetrofitProvider = DoubleCheck.provider(new SwitchingProvider<Retrofit>(singletonCImpl, 4));
+      this.provideApiServiceProvider = DoubleCheck.provider(new SwitchingProvider<ApiService>(singletonCImpl, 3));
+      this.realAuthRepositoryProvider = new SwitchingProvider<>(singletonCImpl, 2);
       this.bindAuthRepositoryProvider = DoubleCheck.provider((Provider) realAuthRepositoryProvider);
       this.realVehicleRepositoryProvider = new SwitchingProvider<>(singletonCImpl, 7);
       this.bindVehicleRepositoryProvider = DoubleCheck.provider((Provider) realVehicleRepositoryProvider);
@@ -719,20 +720,20 @@ public final class DaggerAutoCheckerApp_HiltComponents_SingletonC {
           case 0: // com.autochecker.data.local.DataStoreManager 
           return (T) AppModule_ProvideDataStoreManagerFactory.provideDataStoreManager(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
 
-          case 1: // com.autochecker.data.repository.impl.RealAuthRepository 
+          case 1: // com.autochecker.data.local.TokenManager 
+          return (T) AppModule_ProvideTokenManagerFactory.provideTokenManager(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 2: // com.autochecker.data.repository.impl.RealAuthRepository 
           return (T) new RealAuthRepository(singletonCImpl.provideApiServiceProvider.get(), singletonCImpl.provideTokenManagerProvider.get());
 
-          case 2: // com.autochecker.core.network.ApiService 
+          case 3: // com.autochecker.core.network.ApiService 
           return (T) NetworkModule_ProvideApiServiceFactory.provideApiService(singletonCImpl.provideRetrofitProvider.get());
 
-          case 3: // retrofit2.Retrofit 
+          case 4: // retrofit2.Retrofit 
           return (T) NetworkModule_ProvideRetrofitFactory.provideRetrofit(singletonCImpl.provideOkHttpClientProvider.get(), singletonCImpl.provideGsonProvider.get());
 
-          case 4: // okhttp3.OkHttpClient 
+          case 5: // okhttp3.OkHttpClient 
           return (T) NetworkModule_ProvideOkHttpClientFactory.provideOkHttpClient(singletonCImpl.authInterceptor());
-
-          case 5: // com.autochecker.data.local.TokenManager 
-          return (T) AppModule_ProvideTokenManagerFactory.provideTokenManager(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
 
           case 6: // com.google.gson.Gson 
           return (T) NetworkModule_ProvideGsonFactory.provideGson();

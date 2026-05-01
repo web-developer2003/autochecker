@@ -4,7 +4,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.produceState
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -12,7 +11,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.autochecker.data.local.TokenManager
 import com.autochecker.ui.auth.LoginScreen
 import com.autochecker.ui.auth.SignUpScreen
 import com.autochecker.ui.accident.ReportAccidentScreen
@@ -32,7 +30,6 @@ import com.autochecker.ui.settings.LanguageScreen
 import com.autochecker.ui.settings.PrivacyPolicyScreen
 import com.autochecker.ui.settings.TermsOfServiceScreen
 import com.autochecker.ui.theme.AutoCheckerTheme
-import kotlinx.coroutines.flow.first
 
 private val screensWithBottomBar = setOf(
     Screen.Home.route,
@@ -41,14 +38,7 @@ private val screensWithBottomBar = setOf(
 )
 
 @Composable
-fun AppNavGraph(tokenManager: TokenManager) {
-    val startDestination by produceState<String?>(initialValue = null) {
-        val token = tokenManager.token.first()
-        value = if (token != null) Screen.Home.route else Screen.Login.route
-    }
-
-    val resolvedStart = startDestination ?: return
-
+fun AppNavGraph(startDestination: String) {
     val navController = rememberNavController()
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
@@ -72,7 +62,7 @@ fun AppNavGraph(tokenManager: TokenManager) {
     ) { innerPadding ->
         NavHost(
             navController = navController,
-            startDestination = resolvedStart,
+            startDestination = startDestination,
             modifier = Modifier.padding(innerPadding)
         ) {
             // Auth

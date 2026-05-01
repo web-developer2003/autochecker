@@ -78,7 +78,10 @@ fun AccidentsListScreen(
                     items(report.accidents) { accident ->
                         AccidentCard(
                             accident = accident,
-                            onClick = { onAccidentClick(accident.guid) },
+                            onClick = {
+                                val guid = accident.guid
+                                if (!guid.isNullOrEmpty()) onAccidentClick(guid)
+                            },
                         )
                     }
 

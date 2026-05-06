@@ -1,76 +1,122 @@
-# Kotlin Android Project (VS Code Setup)
+# AutoChecker Android
 
-## Prerequisites
+Android client for the AutoChecker vehicle history platform.
+Built with Kotlin, Jetpack Compose, Hilt, and Retrofit.
 
-1. **Java JDK 17+** — [Download](https://adoptium.net/)
-2. **Android SDK** — Install via [Android command-line tools](https://developer.android.com/studio#command-line-tools-only) (no Android Studio needed)
-3. **VS Code** — [Download](https://code.visualstudio.com/)
-4. **Kotlin** — Install via `brew install kotlin` (macOS) or `sdk install kotlin` (SDKMAN)
+## Requirements
 
-## Setup Android SDK (without Android Studio)
+- Android Studio Hedgehog (2023.1.1) or newer
+- JDK 17
+- Android SDK: compile SDK 35, min SDK 24 (Android 7.0+)
+- A running AutoChecker backend (see `back/README.md`)
+
+---
+
+## Setup
+
+### 1. Clone and open
+
+Open the `front/` folder in Android Studio as the project root.
+
+### 2. Configure the backend URL
+
+Find the Retrofit base URL in the DI/network module and set it to your backend address:
+
+- **Local emulator**: `http://10.0.2.2:8000/`
+- **Physical device on same network**: `http://<your-machine-ip>:8000/`
+- **Production**: your deployed API URL
+
+### 3. Sync Gradle
+
+Android Studio will prompt to sync automatically. If not:
+
+```
+File → Sync Project with Gradle Files
+```
+
+### 4. Run
+
+Connect a device or start an emulator, then click **Run** (Shift+F10), or from the terminal:
 
 ```bash
+# Windows
+gradlew.bat installDebug
+
 # macOS/Linux
-mkdir -p ~/Android/Sdk/cmdline-tools
-cd ~/Android/Sdk/cmdline-tools
-# Download and unzip cmdline-tools from https://developer.android.com/studio#command-line-tools-only
-# Then rename the folder:
-mv cmdline-tools latest
-
-# Set environment variables (add to ~/.bashrc or ~/.zshrc)
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# Install required SDK components
-sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
-```
-
-## Opening in VS Code
-
-```bash
-code .
-```
-
-Install recommended extensions when prompted (`.vscode/extensions.json`).
-
-## Building the App
-
-```bash
-# Build debug APK
-./gradlew assembleDebug
-
-# Install on connected device/emulator
 ./gradlew installDebug
-
-# Run all tests
-./gradlew test
 ```
 
-## Working with Pencil (.pen) Design Files
+---
 
-Pencil Project `.pen` files are ZIP archives containing XML and SVG assets.
+## Build variants
 
-To extract and inspect your design:
+| Variant | Description |
+|---|---|
+| `debug` | Development build with logging enabled |
+| `release` | Minified + ProGuard, requires signing config |
+
+To build a release APK:
+
 ```bash
-# Rename and unzip
-cp your-design.pen your-design.zip
-unzip your-design.zip -d pencil-assets/
-# Your SVG screens will be in pencil-assets/
+# Windows
+gradlew.bat assembleRelease
+
+# macOS/Linux
+./gradlew assembleRelease
 ```
 
-Then you can upload individual SVGs here and I'll convert them into Android XML layouts!
+---
 
-## Project Structure
+## Project structure
 
 ```
-app/
-├── src/main/
-│   ├── kotlin/com/myapp/    ← Kotlin source files
-│   ├── res/
-│   │   ├── layout/          ← XML layouts
-│   │   ├── values/          ← colors, strings, themes
-│   │   └── drawable/        ← icons and images
-│   └── AndroidManifest.xml
-└── build.gradle.kts
+front/app/src/main/
+├── data/
+│   ├── api/          # Retrofit service interfaces
+│   ├── model/        # Data classes (DTOs)
+│   └── repository/   # Repository implementations
+├── di/               # Hilt modules
+├── ui/
+│   ├── navigation/   # Screen.kt, AppNavGraph.kt
+│   ├── screens/      # One folder per screen
+│   └── theme/        # Colors, typography, shapes
+└── MainActivity.kt
+```
+
+---
+
+## Tech stack
+
+| Library | Purpose |
+|---|---|
+| Jetpack Compose | UI |
+| Hilt | Dependency injection |
+| Retrofit + OkHttp | HTTP client |
+| Gson | JSON serialization |
+| Coil | Image loading |
+| DataStore | Local preferences / token storage |
+| Navigation Compose | In-app navigation |
+
+---
+
+## Localization
+
+String resources are in three language folders:
+
+- `res/values/strings.xml` — Uzbek (default)
+- `res/values-ru/strings.xml` — Russian
+- `res/values-en/strings.xml` — English
+
+Add new strings to all three files to keep languages in sync.
+
+---
+
+## Running tests
+
+```bash
+# Unit tests
+./gradlew test
+
+# Instrumentation tests (requires connected device/emulator)
+./gradlew connectedAndroidTest
 ```
